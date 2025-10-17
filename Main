@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rengin Özder | Web GIS Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experiences.html">Experiences</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Welcome to Rengin Özder’s Web GIS Page</h1>
+    <p>This website was created for GMT458 – Web GIS Assignment 1.</p>
+  </header>
+
+  <section>
+    <h2>About This Project</h2>
+    <p>
+      This project aims to demonstrate my experience in Web GIS technologies including HTML, CSS, and OpenLayers.
+      You can navigate through the sections above to learn more about me and my work.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Rengin Özder | Hacettepe University</p>
+  </footer>
+</body>
+</html>
