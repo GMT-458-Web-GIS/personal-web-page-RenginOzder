@@ -1,0 +1,84 @@
+/* ===== Genel Ayarlar ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #e0f7fa, #f1f8e9); /* HydroGeo + EarthyTerrain */
+  color: #333;
+}
+
+/* ===== Menü ===== */
+nav {
+  background-color: #006064; /* koyu mavi */
+  padding: 10px 20px;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav li {
+  margin-right: 20px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #ff9800; /* turuncu hover efekti */
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(255,255,255,0.6);
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* ===== Section ===== */
+section {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #004d40;
+  color: #fff;
+}
+
+/* ===== Animasyon ===== */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* ===== Tablo Örnek (Experiences sayfası için) ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+table, th, td {
+  border: 1px solid #006064;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #00838f;
+  color: #fff;
+}
+tr:nth-child(even) {
+  background-color: #e0f7fa;
+}
