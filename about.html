@@ -1,12 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About | Rengin Özder</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rengin Özder</title>
+  <style>
+    /* Font & Color Setup */
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: #2e2e2e;
+      background: linear-gradient(to bottom, #f9f7f3, #e7e1d4);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      padding: 1rem 2rem;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #2e2e2e;
+      font-weight: bold;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 8rem 12%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1, h2 {
+      font-family: "Playfair Display", serif;
+      color: #2c3e37;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 2rem;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      max-width: 800px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-  <h1>About Me</h1>
-  <p>Hi, I'm Rengin Özder, a geomatics engineer passionate about Web GIS, remote sensing, and GNSS-based hydrology.</p>
-  <p>This website showcases my academic and professional work in geospatial sciences.</p>
+    <header>
+        <h2 class="logo"><span>Rengin Özder</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="experiences.html">Experiences</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+  <section id="intro">
+    <h1>Hi, I’m Rengin Özder.</h1>
+    <p>
+      I’m deeply fascinated by the natural world — by what happens both above and below the surface of the Earth.
+      Since childhood, I’ve been curious about how landscapes evolve and how the planet tells its story through rocks,
+      water, and space. That passion led me to pursue my lifelong dream: studying Geological Engineering at
+      <strong>Middle East Technical University (METU)</strong>.
+    </p>
+  </section>
+
+  <section id="journey">
+    <h2>How I got here</h2>
+    <p>
+      I graduated from METU in 2016, and my curiosity for research led me to continue with a master’s degree in the same department.
+      My thesis, <em>“Responses of Planktonic Foraminifera to Environmental Conditions Across the Cretaceous/Paleogene Boundary in the Göynük Basin”</em>,
+      allowed me to explore the relationship between ancient microfossils and changing environments. I completed my studies with a 4.0 GPA
+      — an experience that shaped not only my scientific mindset but also my patience and love for details.
+    </p>
+  </section>
+
+  <section id="now">
+    <h2>Where I am now</h2>
+    <p>
+      Today, I’m studying <strong>Geomatics Engineering at Hacettepe University</strong>, focusing on the intersection of
+      <strong>hydrogeology</strong> and <strong>geodesy</strong>. My current interest is in combining GNSS techniques with
+      hydrological observations to address one of the most urgent global challenges: water scarcity.
+      In a way, I’m connecting the ground and the sky — merging traditional Earth science with modern satellite technology.
+    </p>
+  </section>
+
+  <section id="drives">
+    <h2>What drives me</h2>
+    <p>
+      People often ask whether it’s scientific curiosity, environmental sustainability, or my connection with nature that keeps me moving.
+      Honestly — it’s all of them. For me, science is a language that allows us to listen to Earth’s quiet rhythms.
+      Every dataset, every field observation, every image from orbit feels like a small message from the planet — and I want to understand it.
+    </p>
+  </section>
+
+  <section id="beyond">
+    <h2>Beyond the work</h2>
+    <p>
+      Beyond research, I love discovering and creating. I enjoy experimenting with <strong>coffee aromas</strong>,
+      following <strong>film soundtracks</strong>, <strong>reading</strong>, and <strong>cooking</strong>.
+      During my METU years, I was part of the <strong>Gastronomy Society</strong> and <strong>Ankara Volunteers (AGT)</strong>,
+      where I found joy in cultural and culinary exploration.  
+      I’m also a proud member of <strong>Ankara Kültür Gezginleri (Anadolu Kartalları)</strong> — a group dedicated to uncovering
+      hidden corners of Turkey and the world, always seeking the stories that landscapes have to tell.
+    </p>
+  </section>
+
+  <section id="future">
+    <h2>Looking ahead</h2>
+    <p>
+      I hope to continue bridging geology, geomatics, and hydrology — connecting data, technology, and curiosity to help build
+      a more sustainable understanding of our planet. Whether I’m analyzing satellite signals or walking through a river valley,
+      my goal remains the same: to listen, to learn, and to care for Earth’s systems.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Rengin Özder — Designed with curiosity and care 🌍
+  </footer>
+
+  <script>
+    // Scroll animation
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
